@@ -1,8 +1,12 @@
 export default function Home() {
+  function login() {
+    alert("Access Granted");
+  }
+
   return (
-    <div style={{
-      backgroundColor: "#0a0a0a",
-      color: "white",
+    <div style={{ 
+      background: "#0a0a0a", 
+      color: "white", 
       height: "100vh",
       display: "flex",
       justifyContent: "center",
@@ -11,52 +15,45 @@ export default function Home() {
     }}>
       <div style={{
         background: "#111",
-        padding: "40px",
+        padding: "30px",
         borderRadius: "10px",
-        boxShadow: "0 0 20px rgba(0,0,0,0.8)",
         width: "300px",
         textAlign: "center"
       }}>
-        <h2>Government Secure System</h2>
+        <h2>Secure Login</h2>
         <p style={{ fontSize: "12px", color: "gray" }}>
-          Authorized Personnel Only
+          Authorized Access Only
         </p>
 
-        <input
+        <input 
           placeholder="Username"
           style={{
             width: "100%",
             padding: "10px",
-            marginTop: "15px",
-            borderRadius: "5px",
-            border: "none"
+            marginTop: "15px"
           }}
         />
 
-        <input
+        <input 
           type="password"
           placeholder="Password"
           style={{
             width: "100%",
             padding: "10px",
-            marginTop: "10px",
-            borderRadius: "5px",
-            border: "none"
+            marginTop: "10px"
           }}
         />
 
-        <button
+        <button 
+          onClick={login}
           style={{
             width: "100%",
             padding: "10px",
             marginTop: "15px",
-            background: "#00ff99",
+            background: "lime",
             border: "none",
-            borderRadius: "5px",
-            fontWeight: "bold",
             cursor: "pointer"
           }}
-          onClick={() => alert("Access Granted")}
         >
           Login
         </button>
